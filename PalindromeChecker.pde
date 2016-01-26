@@ -16,7 +16,11 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
-  //your code here
+  String werd = new String("");
+  for(int i = (word.length()-1); i > 0; i--){
+  werd = werd + word.substring(i - 1, i);
+  }
+
   return false;
 }
 
