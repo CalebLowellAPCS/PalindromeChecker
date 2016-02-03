@@ -40,8 +40,9 @@ public boolean palindrome(String word)
     }
   }
 
-  println(werd2.toLowerCase());
-  println(werd3.toLowerCase());
+if(werd2.toLowerCase().equals(werd3.toLowerCase())){
+  return true;
+}
   return false;
 }
 
