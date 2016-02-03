@@ -17,11 +17,31 @@ public void setup()
 public boolean palindrome(String word)
 {
   String werd = new String("");
-  for(int i = word.length()-1; i > 0; i--){
-  werd = werd + word.charAt(i);
-  println(werd);
+  String werd2 = new String("");
+  String werd3 = new String("");
+
+//reverser
+  for(int i = word.length()-1; i > -1; i--){
+    werd = werd + word.charAt(i);
   }
 
+  for(int i = 0; i <werd.length(); i++){
+
+    if(! werd.substring(i, i+1).equals(" ") && Character.isLetter(werd.charAt(i)) == true){
+    werd2 = werd2 + werd.substring(i, i+1);
+    }
+  }
+
+//regular
+  for(int i = 0; i <word.length(); i++){
+
+    if(! word.substring(i, i+1).equals(" ") && Character.isLetter(word.charAt(i)) == true){
+    werd3 = werd3 + word.substring(i, i+1);
+    }
+  }
+
+  println(werd2.toLowerCase());
+  println(werd3.toLowerCase());
   return false;
 }
 
